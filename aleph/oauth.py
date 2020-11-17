@@ -58,7 +58,7 @@ def handle_azure_oauth(provider, oauth_token):
     # Validate
     token_data.validate()
 
-    upn = token_data["upn"]
+    upn = token_data["preferred_username"]
     name = token_data["name"]
     log.debug("Decoded token: %s (%s)", upn, name)
     user_id = "azure:%s" % upn
