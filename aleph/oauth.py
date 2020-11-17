@@ -58,11 +58,11 @@ def handle_azure_oauth(provider, oauth_token):
     # Validate
     token_data.validate()
 
-    upn = token_data["preferred_username"]
+    email = token_data["email"]
     name = token_data["name"]
-    log.debug("Decoded token: %s (%s)", upn, name)
-    user_id = "azure:%s" % upn
-    return Role.load_or_create(user_id, Role.USER, name, email=upn)
+    log.debug("Decoded token: %s (%s)", email, name)
+    user_id = "azure:%s" % email
+    return Role.load_or_create(user_id, Role.USER, name, email=email)
 
 
 def handle_google_oauth(provider, oauth_token):
