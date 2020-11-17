@@ -1,9 +1,9 @@
 ---
 home: true
-title: 'Aleph'
-description: 'Search documents, companies and people'
+title: 'Athena'
+description: 'Powered by Aleph'
 html: true
-samples: ["Vladimir Putin", "TeliaSonera"]
+samples: ["Maurice Duplessis", "René Lévesque"]
 ---
 
 <section className="HomeScreen__section">
